@@ -1,0 +1,10 @@
+.search-result-list{
+  margin-top:10px;
+}
+.search-result-list .list-item{
+  border-bottom:1px solid #ccc;
+  padding:10rpx;
+}
+.input-wrap{display:flex;}
+.search-input{border:1rpx solid #ccc;padding:3rpx;margin:5rpx;flex-basis: 80%;}
+/*.search-button{}*/

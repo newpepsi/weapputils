@@ -1,0 +1,19 @@
+
+<!--index.wxml-->
+<view>
+  <view>您输入的关键词：{{inputs}}</view>
+  <view class="input-wrap">
+    <input bindinput="bindSearchInput" placeholder="点击此处开始输入...." value="微信" class="search-input" auto-focus/>
+    <button bindtap="bindSearchTap" class="search-button">搜索</button>
+  </view>
+  <view class="search-result-list">
+    <block wx:for="{{result}}" wx:for-index="idx" wx:for-item="key_item">
+      <view data-idx="{{idx}}" class="list-item">
+        <block wx:for="{{key_item}}" wx:for-item="key_obj">
+          <text wx:if="{{key_obj.key == true}}" style="color:red;">{{key_obj.str}}</text>
+          <text wx:else>{{key_obj.str}}</text>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
